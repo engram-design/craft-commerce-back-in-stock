@@ -19,3 +19,14 @@
     errors: settings.getErrors('hasCpSection'),
     warning: macros.configWarning('hasCpSection', 'craft-commerce-back-in-stock'),
 }) }}
+
+{{ forms.textField({
+    label: 'Stock Threshold' | t('craft-commerce-back-in-stock'),
+    instructions: 'Set the minimum number of items in stock that should trigger notifications.' | t('craft-commerce-back-in-stock'),
+    id: 'stockThreshold',
+    name: 'stockThreshold',
+    value: settings.stockThreshold,
+    size: 2,
+    errors: settings.getErrors('stockThreshold'),
+    warning: macros.configWarning('stockThreshold', 'craft-commerce-back-in-stock'),
+}) }}

@@ -10,6 +10,7 @@ return [
     '*' => [
         'pluginName' => 'Back In Stock',
         'hasCpSection' => true,
+        'stockThreshold' => 0,
         'sendConfirmation' => false,
         'confirmationEmailTemplate' => 'craft-commerce-back-in-stock/emails/confirmation',
         'confirmationEmailSubject' =>'Back in stock notification confirmation for {{ variant.title }}',
@@ -23,6 +24,7 @@ return [
 ## Configuration options
 - `pluginName` - If you wish to customise the plugin name.
 - `hasCpSection` - Whether to enable Back in Stock in the main sidebar navigation.
+- `stockThreshold` - Set the minimum number of items in stock that should trigger notifications.
 - `sendConfirmation` - Whether a confirmation email should be sent to the customer if they request to be notified.
 - `confirmationEmailTemplate` - Use a custom template for the confirmation email.
 - `confirmationEmailSubject` - The email subject for the confirmation email.
