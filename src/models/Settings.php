@@ -12,6 +12,7 @@ class Settings extends Model
 
     public string $pluginName = 'Back in Stock';
     public bool $hasCpSection = true;
+    public int $stockThreshold = 0;
     public bool $sendConfirmation = false;
     public ?string $confirmationEmailTemplate = null;
     public string $confirmationEmailSubject = 'Back in stock notification confirmation for {{ variant.title }}';
@@ -24,6 +25,14 @@ class Settings extends Model
 
     // Public Methods
     // =========================================================================
+
+    public function defineRules(): array
+    {
+        $rules = parent::defineRules();
+        $rules[] = [['stockThreshold'], 'number', 'integerOnly' => true];
+
+        return $rules;
+    }
 
     public function getFromEmail(): ?string
     {
