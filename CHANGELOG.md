@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.0.7 - 2025-03-05
+
+### Added
+- Add `stockThreshold` plugin setting to control the minimum stock level to trigger notifications.
+
 ## 3.0.6 - 2025-02-03
 
 ### Fixed
